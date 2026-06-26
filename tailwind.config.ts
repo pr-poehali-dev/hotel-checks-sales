@@ -18,7 +18,12 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				serif: ['Merriweather', 'serif'],
+				sans: ['IBM Plex Sans', 'sans-serif']
+			},
 			colors: {
+				gold: 'hsl(var(--gold))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
