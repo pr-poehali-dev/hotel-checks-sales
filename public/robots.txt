@@ -1,14 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://kassovie-cheki01.ru/sitemap.xml
+
 User-agent: Googlebot
 Allow: /
 
+User-agent: Yandex
+Allow: /
+
 User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: *
 Allow: /
