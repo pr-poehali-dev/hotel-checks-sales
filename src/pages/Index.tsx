@@ -286,31 +286,70 @@ const Index = () => {
             <p className="text-muted-foreground mt-4">Гостиничные чеки и отчётные документы — в городах Краснодарского края</p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {[
-              { city: 'Сочи', url: 'https://cheki-sochi.ru/' },
-              { city: 'Анапа', url: 'https://chekgarant.online' },
-              { city: 'Новороссийск', url: 'https://kassovie-cheki01.ru' },
-              { city: 'Геленджик', url: 'https://cheki-gelendzhik.ru' },
-              { city: 'Анапа', url: 'https://kassovie-cheki01.online/' },
-              { city: 'Крымск', url: 'https://cheki-gelendzhik.ru/cheki-krimsk' },
-              { city: 'Туапсе', url: 'https://cheki-sochi.ru/cheki-tuapse' },
+              {
+                city: 'Сочи',
+                url: 'https://cheki-sochi.ru/',
+                address: 'ул. Горького, 56 (Автовокзал Сочи)',
+                img: 'https://cdn.poehali.dev/projects/ad4dfebe-dcca-4ccc-9dc3-d8882c82648f/files/8c5244c1-5323-4cd6-acaa-6479a926ea8f.jpg',
+              },
+              {
+                city: 'Анапа',
+                url: 'https://chekgarant.online',
+                address: 'ул. Шевченко, 5 (Автовокзал Анапа)',
+                img: 'https://cdn.poehali.dev/projects/ad4dfebe-dcca-4ccc-9dc3-d8882c82648f/files/7b8c507d-7961-4823-9d11-b73be19745ec.jpg',
+              },
+              {
+                city: 'Новороссийск',
+                url: 'https://kassovie-cheki01.ru',
+                address: 'Мысхакское шоссе, 59 В (Автовокзал Новороссийск)',
+                img: 'https://cdn.poehali.dev/projects/ad4dfebe-dcca-4ccc-9dc3-d8882c82648f/files/b0f01d04-6f0d-4d3d-b8ef-a53ac5163efa.jpg',
+              },
+              {
+                city: 'Геленджик',
+                url: 'https://cheki-gelendzhik.ru',
+                address: 'ул. Революционная, 1 (Автовокзал Геленджик)',
+                img: 'https://cdn.poehali.dev/projects/ad4dfebe-dcca-4ccc-9dc3-d8882c82648f/files/28f1a0bb-e3b5-4bd5-a0c1-cfffef8f582f.jpg',
+              },
+              {
+                city: 'Крымск',
+                url: 'https://cheki-gelendzhik.ru/cheki-krimsk',
+                address: 'ул. Карла Маркса, 196 (Автовокзал Крымск)',
+                img: 'https://cdn.poehali.dev/projects/ad4dfebe-dcca-4ccc-9dc3-d8882c82648f/files/d3a289ba-5453-497c-be44-9a7ef3d2f1fd.jpg',
+              },
+              {
+                city: 'Туапсе',
+                url: 'https://cheki-sochi.ru/cheki-tuapse',
+                address: 'ул. Победы, 36 (Автовокзал Туапсе)',
+                img: 'https://cdn.poehali.dev/projects/ad4dfebe-dcca-4ccc-9dc3-d8882c82648f/files/ddc586d0-2d77-4bc3-8f9d-683e7d03a9c3.jpg',
+              },
             ].map((p) => (
               <a
                 key={p.url}
                 href={p.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 bg-card border border-border rounded-sm px-5 py-4 hover:border-gold hover:shadow-md transition-all"
+                className="group relative overflow-hidden rounded-sm border border-border hover:border-gold hover:shadow-lg transition-all block"
               >
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-primary text-gold">
-                  <Icon name="MapPin" size={18} />
+                <div className="relative h-44 overflow-hidden">
+                  <img src={p.img} alt={p.city} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/30 to-transparent" />
+                  <div className="absolute top-3 right-3 flex h-8 w-8 items-center justify-center rounded-sm bg-gold/90 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Icon name="ExternalLink" size={14} />
+                  </div>
                 </div>
-                <div>
-                  <div className="font-serif font-bold text-primary group-hover:text-gold transition-colors">Гостиничные чеки</div>
-                  <div className="text-sm text-muted-foreground">{p.city}</div>
+                <div className="p-5 bg-card">
+                  <div className="font-serif font-bold text-primary group-hover:text-gold transition-colors mb-1">Гостиничные чеки — {p.city}</div>
+                  <div className="flex items-start gap-2 text-xs text-muted-foreground">
+                    <Icon name="MapPin" size={13} className="shrink-0 mt-0.5 text-gold" />
+                    {p.address}
+                  </div>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground mt-1">
+                    <Icon name="Phone" size={13} className="shrink-0 text-gold" />
+                    +7 (996) 532-32-43
+                  </div>
                 </div>
-                <Icon name="ExternalLink" size={14} className="ml-auto text-muted-foreground group-hover:text-gold transition-colors" />
               </a>
             ))}
           </div>
