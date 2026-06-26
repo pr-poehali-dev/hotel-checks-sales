@@ -276,6 +276,75 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Partners */}
+      <section className="py-20 lg:py-28">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-gold uppercase tracking-widest text-sm font-semibold">Сеть присутствия</span>
+            <h2 className="font-serif font-black text-3xl lg:text-4xl text-primary mt-3">Наши партнёры в других городах</h2>
+            <div className="mx-auto mt-4 h-0.5 w-20 bg-gold" />
+            <p className="text-muted-foreground mt-4">Гостиничные чеки и отчётные документы — в городах Краснодарского края</p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-16">
+            {[
+              { city: 'Сочи', url: 'https://cheki-sochi.ru/' },
+              { city: 'Анапа', url: 'https://chekgarant.online' },
+              { city: 'Новороссийск', url: 'https://kassovie-cheki01.ru' },
+              { city: 'Геленджик', url: 'https://cheki-gelendzhik.ru' },
+              { city: 'Анапа', url: 'https://kassovie-cheki01.online/' },
+              { city: 'Крымск', url: 'https://cheki-gelendzhik.ru/cheki-krimsk' },
+              { city: 'Туапсе', url: 'https://cheki-sochi.ru/cheki-tuapse' },
+            ].map((p) => (
+              <a
+                key={p.url}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 bg-card border border-border rounded-sm px-5 py-4 hover:border-gold hover:shadow-md transition-all"
+              >
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-primary text-gold">
+                  <Icon name="MapPin" size={18} />
+                </div>
+                <div>
+                  <div className="font-serif font-bold text-primary group-hover:text-gold transition-colors">Гостиничные чеки</div>
+                  <div className="text-sm text-muted-foreground">{p.city}</div>
+                </div>
+                <Icon name="ExternalLink" size={14} className="ml-auto text-muted-foreground group-hover:text-gold transition-colors" />
+              </a>
+            ))}
+          </div>
+
+          <div className="bg-card border border-border rounded-sm p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary text-gold">
+                <Icon name="Truck" size={20} />
+              </div>
+              <h3 className="font-serif font-bold text-xl text-primary">Доставка по всему Краснодарскому краю</h3>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {[
+                'Гостиничный чек с подтверждением — Краснодар, Анапа, Славянск-на-Кубани, Армавир, Ейск, Сочи, Адлер, Геленджик, Кропоткин, Новороссийск',
+                'Товарные чеки — Краснодар, Анапа, Славянск-на-Кубани, Армавир, Ейск, Сочи, Адлер, Геленджик, Кропоткин, Новороссийск',
+                'Кассовые чеки — Краснодар, Анапа, Славянск-на-Кубани, Армавир, Ейск, Сочи, Адлер, Геленджик, Кропоткин, Новороссийск',
+                'Договор об оказании гостиничных услуг — Краснодар, Анапа, Славянск-на-Кубани, Армавир, Ейск, Сочи, Адлер, Геленджик, Кропоткин, Новороссийск',
+                'Акт выполненных работ + гостиничный чек — Краснодар (задним числом)',
+                'Счёт-фактура с актом выполненных работ — Краснодар, Анапа, Армавир, Ейск, Сочи, Адлер, Геленджик, Новороссийск',
+                'Чеки АЗС / ГСМ на бензин — Краснодар, Анапа, Армавир, Ейск, Сочи, Адлер, Геленджик, Кропоткин, Новороссийск',
+                'Чек на гостиницу с доставкой по городу — Краснодар, Анапа, Армавир, Сочи, Адлер, Геленджик, Новороссийск',
+                'Ресторанные чеки с записью блюд — Краснодар, Анапа, Армавир, Ейск, Сочи, Адлер, Геленджик, Кропоткин, Новороссийск',
+                'Чеки на стройматериалы — Краснодар, Анапа, Сочи, Адлер, Геленджик, Новороссийск',
+              ].map((item) => (
+                <div key={item} className="flex gap-3 text-sm text-muted-foreground">
+                  <Icon name="CheckCircle" size={16} className="text-gold shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Reviews */}
       <section id="reviews" className="py-20 lg:py-28 bg-secondary/50">
         <div className="container">
