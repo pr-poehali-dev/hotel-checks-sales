@@ -345,6 +345,35 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Floating buttons */}
+      <div className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3">
+        <a
+          href="tel:+79965323243"
+          className="group flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
+        >
+          <Icon name="Phone" size={20} className="text-gold" />
+          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">Позвонить</span>
+        </a>
+        <a
+          href="https://wa.me/79965323243"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-3 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
+        >
+          <Icon name="MessageCircle" size={20} />
+          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">WhatsApp</span>
+        </a>
+        <a
+          href="https://t.me/+79965323243"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-3 rounded-full bg-[#229ED9] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
+        >
+          <Icon name="Send" size={20} />
+          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">Telegram</span>
+        </a>
+      </div>
+
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-10">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-4">
