@@ -16,6 +16,7 @@ const nav = [
   { id: 'pricing', label: 'Прайс' },
   { id: 'about', label: 'О компании' },
   { id: 'gallery', label: 'Примеры' },
+  { id: 'reviews', label: 'Отзывы' },
   { id: 'contacts', label: 'Контакты' },
 ];
 
@@ -270,6 +271,75 @@ const Index = () => {
                   <img src={g.img} alt={g.title} className="w-full object-contain" />
                 </DialogContent>
               </Dialog>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews */}
+      <section id="reviews" className="py-20 lg:py-28 bg-secondary/50">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="text-gold uppercase tracking-widest text-sm font-semibold">Что говорят клиенты</span>
+            <h2 className="font-serif font-black text-3xl lg:text-4xl text-primary mt-3">Отзывы</h2>
+            <div className="mx-auto mt-4 h-0.5 w-20 bg-gold" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: 'Андрей Соколов',
+                role: 'Командировочный, Москва',
+                text: 'Срочно понадобились гостиничные чеки за три ночи. Оформили в течение часа, всё с печатями и подписями. Бухгалтерия приняла без замечаний. Очень выручили!',
+                stars: 5,
+                initials: 'АС',
+              },
+              {
+                name: 'Марина Волкова',
+                role: 'Частный предприниматель',
+                text: 'Заказывала товарные чеки и акты выполненных работ. Всё чисто, аккуратно, в срок. Уже второй раз обращаюсь и снова довольна результатом.',
+                stars: 5,
+                initials: 'МВ',
+              },
+              {
+                name: 'ООО «СтройРегион»',
+                role: 'Строительная компания, Краснодар',
+                text: 'Регулярно сотрудничаем по оформлению чеков на стройматериалы и счёт-фактур. Работают оперативно, цены адекватные, реквизиты всегда верные. Рекомендуем партнёрам.',
+                stars: 5,
+                initials: 'СР',
+                org: true,
+              },
+              {
+                name: 'Дмитрий Петров',
+                role: 'Водитель-дальнобойщик',
+                text: 'Нужны были чеки АЗС для отчёта. Связался через WhatsApp — ответили быстро, всё объяснили. Документы получил в тот же день. Буду обращаться ещё.',
+                stars: 5,
+                initials: 'ДП',
+              },
+              {
+                name: 'Наталья Крылова',
+                role: 'Менеджер по закупкам',
+                text: 'Помогли оформить ресторанные чеки для корпоративного отчёта. Всё выглядит профессионально, никаких вопросов от финансового отдела не возникло. Спасибо!',
+                stars: 5,
+                initials: 'НК',
+              },
+            ].map((r) => (
+              <div key={r.name} className="bg-card border border-border rounded-sm p-7 flex flex-col gap-4 hover:border-gold hover:shadow-md transition-all">
+                <div className="flex gap-1">
+                  {Array.from({ length: r.stars }).map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-gold fill-gold" />
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">«{r.text}»</p>
+                <div className="flex items-center gap-3 pt-2 border-t border-border">
+                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-sm text-sm font-bold text-primary-foreground ${r.org ? 'bg-gold' : 'bg-primary'}`}>
+                    {r.initials}
+                  </div>
+                  <div>
+                    <div className="font-serif font-bold text-sm text-primary">{r.name}</div>
+                    <div className="text-xs text-muted-foreground">{r.role}</div>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
