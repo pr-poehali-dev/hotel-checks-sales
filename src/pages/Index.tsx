@@ -67,9 +67,9 @@ const Index = () => {
             <Icon name="MapPin" size={14} className="text-gold" />
             г. Новороссийск
           </span>
-          <a href="tel:+78617000000" className="flex items-center gap-2 hover:text-gold transition-colors">
+          <a href="tel:+79965323243" className="flex items-center gap-2 hover:text-gold transition-colors">
             <Icon name="Phone" size={14} className="text-gold" />
-            +7 (8617) 00-00-00
+            +7 (996) 532-32-43
           </a>
         </div>
       </div>
@@ -286,21 +286,43 @@ const Index = () => {
             </p>
             <div className="space-y-5">
               {[
-                ['Phone', 'Телефон', '+7 (8617) 00-00-00'],
-                ['Mail', 'Email', 'info@dokotchet-nvrsk.ru'],
-                ['MapPin', 'Адрес', 'г. Новороссийск, ул. Советов, 1'],
-                ['Clock', 'Режим работы', 'Ежедневно, 9:00 – 21:00'],
-              ].map(([icon, t, d]) => (
-                <div key={t} className="flex gap-4 items-start">
+                ['Phone', 'Телефон', '+7 (996) 532-32-43', 'tel:+79965323243'],
+                ['MapPin', 'Адрес', 'г. Новороссийск, Мысхакское шоссе, 59 В', null],
+                ['Clock', 'Режим работы', 'Ежедневно, с 9:00 до 21:00', null],
+              ].map(([icon, t, d, href]) => (
+                <div key={t as string} className="flex gap-4 items-start">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-primary text-gold">
-                    <Icon name={icon} size={20} />
+                    <Icon name={icon as string} size={20} />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">{t}</div>
-                    <div className="font-serif font-bold text-primary">{d}</div>
+                    {href ? (
+                      <a href={href as string} className="font-serif font-bold text-primary hover:text-gold transition-colors">{d}</a>
+                    ) : (
+                      <div className="font-serif font-bold text-primary">{d}</div>
+                    )}
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="flex flex-wrap gap-4 mt-8">
+              <a
+                href="https://wa.me/79965323243"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              >
+                <Icon name="MessageCircle" size={18} /> WhatsApp
+              </a>
+              <a
+                href="https://t.me/+79965323243"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm bg-[#229ED9] px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              >
+                <Icon name="Send" size={18} /> Telegram
+              </a>
             </div>
           </div>
 
