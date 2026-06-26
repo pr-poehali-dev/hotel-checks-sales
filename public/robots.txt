@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://kassovie-cheki01.ru/sitemap.xml
+Sitemap: https://cheki-top-novorossiysk.online/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
