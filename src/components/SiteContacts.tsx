@@ -54,6 +54,14 @@ const SiteContacts = () => {
               >
                 <Icon name="Send" size={18} /> Telegram
               </a>
+              <a
+                href="https://max.ru/u/f9LHodD0cOKR-Q8BTfSOKFFnva1Qwl_xYasvJfTAdU32qbXXsDWu4nZ1OD0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm bg-[#7B61FF] px-5 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              >
+                <Icon name="MessagesSquare" size={18} /> MAX
+              </a>
             </div>
           </div>
 
