@@ -90,7 +90,7 @@ const SiteContacts = () => {
           className="group flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
           <Icon name="Phone" size={20} className="text-gold" />
-          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">Позвонить</span>
+          <span className="text-sm font-semibold">Позвонить</span>
         </a>
         <a
           href="https://wa.me/79965323243"
@@ -99,7 +99,7 @@ const SiteContacts = () => {
           className="group flex items-center gap-3 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
           <Icon name="MessageCircle" size={20} />
-          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">WhatsApp</span>
+          <span className="text-sm font-semibold">Вацап</span>
         </a>
         <a
           href="https://t.me/+79965323243"
@@ -108,7 +108,7 @@ const SiteContacts = () => {
           className="group flex items-center gap-3 rounded-full bg-[#229ED9] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
           <Icon name="Send" size={20} />
-          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">Telegram</span>
+          <span className="text-sm font-semibold">Телеграм</span>
         </a>
         <a
           href="https://max.ru/u/f9LHodD0cOKR-Q8BTfSOKFFnva1Qwl_xYasvJfTAdU32qbXXsDWu4nZ1OD0"
@@ -117,7 +117,7 @@ const SiteContacts = () => {
           className="group flex items-center gap-3 rounded-full bg-[#7B61FF] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
           <Icon name="MessagesSquare" size={20} />
-          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">MAX</span>
+          <span className="text-sm font-semibold">Макс</span>
         </a>
       </div>
 
