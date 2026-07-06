@@ -99,7 +99,7 @@ const SiteContacts = () => {
           className="group flex items-center gap-3 rounded-full bg-[#25D366] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
           <Icon name="MessageCircle" size={20} />
-          <span className="text-sm font-semibold">Вацап</span>
+          <span className="text-sm font-semibold">WhatsApp</span>
         </a>
         <a
           href="https://t.me/+79965323243"
@@ -108,7 +108,7 @@ const SiteContacts = () => {
           className="group flex items-center gap-3 rounded-full bg-[#229ED9] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
           <Icon name="Send" size={20} />
-          <span className="text-sm font-semibold">Телеграм</span>
+          <span className="text-sm font-semibold">Telegram</span>
         </a>
         <a
           href="https://max.ru/u/f9LHodD0cOKR-Q8BTfSOKFFnva1Qwl_xYasvJfTAdU32qbXXsDWu4nZ1OD0"
@@ -117,7 +117,7 @@ const SiteContacts = () => {
           className="group flex items-center gap-3 rounded-full bg-[#7B61FF] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
           <Icon name="MessagesSquare" size={20} />
-          <span className="text-sm font-semibold">Макс</span>
+          <span className="text-sm font-semibold">MAX</span>
         </a>
       </div>
 
