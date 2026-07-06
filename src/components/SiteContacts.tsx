@@ -102,6 +102,15 @@ const SiteContacts = () => {
           <Icon name="Send" size={20} />
           <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">Telegram</span>
         </a>
+        <a
+          href="https://max.ru/u/f9LHodD0cOKR-Q8BTfSOKFFnva1Qwl_xYasvJfTAdU32qbXXsDWu4nZ1OD0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center gap-3 rounded-full bg-[#7B61FF] text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
+        >
+          <Icon name="MessagesSquare" size={20} />
+          <span className="text-sm font-semibold hidden group-hover:inline-block animate-fade-up">MAX</span>
+        </a>
       </div>
 
       {/* Footer */}
