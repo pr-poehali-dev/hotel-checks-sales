@@ -87,9 +87,9 @@ const SiteContacts = () => {
       <div className="fixed bottom-6 right-5 z-50 flex flex-col items-end gap-3">
         <a
           href="tel:+79965323243"
-          className="group flex items-center gap-3 rounded-full bg-primary text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
+          className="group flex items-center gap-3 rounded-full bg-gray-500 text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all pr-5 pl-4 py-3"
         >
-          <Icon name="Phone" size={20} className="text-gold" />
+          <Icon name="Phone" size={20} />
           <span className="text-sm font-semibold">Позвонить</span>
         </a>
         <a
