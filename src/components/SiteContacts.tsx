@@ -1,6 +1,7 @@
 import Icon from '@/components/ui/icon';
 import { Button } from '@/components/ui/button';
 import { services } from '@/components/data';
+import GlobalSignSeal from '@/components/GlobalSignSeal';
 
 const SiteContacts = () => {
   return (
@@ -131,6 +132,7 @@ const SiteContacts = () => {
             <span className="font-serif font-bold">ДокОтчёт Новороссийск</span>
           </div>
           <p className="text-sm text-primary-foreground/60">© 2026 Все права защищены</p>
+          <GlobalSignSeal />
         </div>
       </footer>
     </>
